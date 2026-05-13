@@ -637,11 +637,11 @@ The Chrome DevTools MCP server supports the following configuration option:
   - **Type:** array
 
 - **`--blocklist`**
-  URL patterns to block access to. Uses standard URLPattern API. Cannot be used with --blocklist
+  Restricts network access by blocking specified URL patterns (uses URLPattern API https://urlpattern.spec.whatwg.org/). Silently detaches from targets with blocked URLs upon connection, and blocks runtime requests (including navigations and subresources).
   - **Type:** array
 
 - **`--allowlist`**
-  URL patterns to allow access to (blocks everything else). Uses standard URLPattern API. Cannot be used with --blocklist.
+  Restricts network access by allowing only specified URL patterns (uses URLPattern API https://urlpattern.spec.whatwg.org/). Requires Chrome 149+. Silently detaches from targets with unallowed URLs upon connection, and blocks runtime requests (including navigations and subresources).
   - **Type:** array
 
 - **`--ignoreDefaultChromeArg`/ `--ignore-default-chrome-arg`**
